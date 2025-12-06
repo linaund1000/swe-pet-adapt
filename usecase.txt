@@ -1,3 +1,4 @@
+-
 UC-0001 - Kullanıcı sisteme kayıt olur
    -> hx_get_register_form
    -> hx_post_register
@@ -12,10 +13,11 @@ UC-0003 - Kullanıcı şifresini unuttuğunda reset linki talep eder
 
 UC-0004 - Kullanıcı yeni şifresini belirler
    -> hx_post_confirm_password_reset
-
 UC-0005 - Kullanıcı sistemden güvenli çıkış yapar
    -> hx_post_logout
 
+-
+-
 UC-0006 - Kullanıcı profil bilgilerini görüntüler
    -> hx_get_profile_view
 
@@ -24,23 +26,32 @@ UC-0007 - Kullanıcı profilini düzenler
    -> hx_post_profile_photo
    -> hx_put_profile_about
 
+UC-X007 - Kullanıcı profil görünürlük ayarlarını belirler -(profil fotosu herkese gorulur, profil ve about kismi var zaten onlar da herkese gorunur istemiyorlarsa bisey koymasinlar)
+
+
 UC-0008 - Kullanıcı hesabını siler
    -> hx_delete_profile
+
 
 UC-0009 - Sahiplendiren kullanıcı pet taslağı oluşturur
    -> hx_get_create_pet_form
    -> hx_post_create_pet_draft
+UC-X009 - Eger bu hayvan onceden de varsa bu sorun. ayni hayvan iki defa olmamali id's saklanmali bir sekilde yeni acmaya izin verilmemeli.
 
 UC-0010 - Sahiplendiren petin temel bilgilerini girer
    -> hx_get_edit_pet_form
    -> hx_put_pet_basic_info
 
-UC-0011 - Sahiplendiren petin sağlık durumunu girer
+UC-0011 - Sahiplendiren petin sağlık durumunu girer - (burda veteriner de bilgi girebilmeli cunku hayvanin saglik durumu sahibi tarafindan tam olarak bilinemeyebilir. saglik durumu 1- veteriner girisi 2- kullanici girisi olmali. 2 farkli bakis acisiyla durum aciklanacak)
    -> hx_put_pet_health_info
+UC-X011 - Atanmis ve kabul etmis veteriner petin saglik durumunu girer
+   -> hx_put_pet_health_info_vet
+
 
 UC-0012 - Sahiplendiren pete fotoğraf/video ekler
    -> hx_post_pet_photos
    -> hx_delete_pet_photo
+
 
 UC-0013 - Sahiplendiren sahiplendirme politikası oluşturur
    -> hx_put_adoption_policy
@@ -51,19 +62,16 @@ UC-0014 - Sahiplendiren masraf/veteriner tercihlerini ayarlar
 UC-0015 - Sahiplendiren veteriner seçer
    -> hx_put_select_veterinarian
 
-UC-0016 - Sahiplendiren ilanı yayına alır
+UC-0016 - Sahiplendiren petin profilini yayına alır
    -> hx_post_publish_pet
 
-UC-0017 - Sahiplendiren ilanı yayından kaldırır
+UC-0017 - Sahiplendiren peti yayından kaldırır
    -> hx_post_unpublish_pet
 
-UC-0018 - Sahiplendiren ilanı siler
-   -> hx_delete_pet
-
-UC-0019 - Kullanıcı ana sayfada ilanları görüntüler
+UC-0019 - Kullanıcı ana sayfada sahiplenebilecek petleri görüntüler
    -> hx_get_home_feed
 
-UC-0020 - Kullanıcı ilanları filtreler
+UC-0020 - Kullanıcı petleri filtreler
    -> hx_get_pet_listings
 
 UC-0021 - Kullanıcı pet detayını ve timeline inceler
@@ -95,8 +103,12 @@ UC-0028 - Kullanıcı reaksiyon bırakır
    -> hx_post_add_reaction
    -> hx_delete_remove_reaction
 
+!!! UC-x029 - potansiyel sahiplenen. sahiplenme talebini olusturdugunda, sahiplenme kosullarini kabul etmis olur, odeme yukumluluklerini ve kosullari bilir. onay butonuna basar.  
+!!! sahiplenme talebi almaya baslamadan once veteriner belli olmali veteriner de on onay vermeli. veterineri sonradan aramakla ugrasmamaliyiz. 
+
 UC-0029 - Sahiplenen talebi oluşturur
    -> hx_post_create_adoption_request
+
 
 UC-0030 - Sahiplendiren gelen talepleri listeler
    -> hx_get_received_requests
@@ -110,36 +122,17 @@ UC-0032 - Sahiplendiren talebi reddeder
 UC-0033 - Sahiplendiren talebi onaylar (Negotiation)
    -> hx_post_approve_request
 
-UC-0034 - Sahiplenen politikayı inceler
-   -> hx_get_policy_terms
 
-UC-0035 - Sahiplenen politikayı kabul eder
-   -> hx_post_accept_policy
 
-UC-0036 - Sahiplenen karşı teklif sunar
-   -> hx_post_counter_offer
 
-UC-0037 - Sahiplendiren şartları revize eder
-   -> hx_post_update_policy_terms
-
-UC-0038 - Sahiplendiren masraf dökümü girer
-   -> hx_post_propose_costs
-   -> hx_get_cost_breakdown
-
-UC-0039 - Sahiplenen masrafı kabul eder/pazarlık yapar
-   -> hx_post_accept_costs
-   -> hx_post_negotiate_costs
-
-UC-0040 - Taraflar anlaşır (Transfer Hazırlığı)
-   -> hx_post_finalize_for_transfer
-   -> hx_get_transfer_ready_info
-
-UC-0041 - Kullanıcı veteriner arar
+UC-0041 - sahiplendiren veteriner arar
    -> hx_get_search_vets
 
 UC-0042 - Kullanıcı veteriner profilini görüntüler
    -> hx_get_vet_profile
    -> hx_get_vet_availability
+
+--
 
 UC-0043 - Veteriner dashboard'unu açar
    -> hx_get_vet_dashboard
