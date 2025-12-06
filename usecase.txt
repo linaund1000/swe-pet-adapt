@@ -1,0 +1,210 @@
+UC-0001 - Kullanıcı sisteme kayıt olur
+   -> hx_get_register_form
+   -> hx_post_register
+
+UC-0002 - Kullanıcı sisteme giriş yapar
+   -> hx_get_login_form
+   -> hx_post_login
+
+UC-0003 - Kullanıcı şifresini unuttuğunda reset linki talep eder
+   -> hx_get_password_reset_form
+   -> hx_post_password_reset
+
+UC-0004 - Kullanıcı yeni şifresini belirler
+   -> hx_post_confirm_password_reset
+
+UC-0005 - Kullanıcı sistemden güvenli çıkış yapar
+   -> hx_post_logout
+
+UC-0006 - Kullanıcı profil bilgilerini görüntüler
+   -> hx_get_profile_view
+
+UC-0007 - Kullanıcı profilini düzenler
+   -> hx_get_profile_edit_form
+   -> hx_post_profile_photo
+   -> hx_put_profile_about
+
+UC-0008 - Kullanıcı hesabını siler
+   -> hx_delete_profile
+
+UC-0009 - Sahiplendiren kullanıcı pet taslağı oluşturur
+   -> hx_get_create_pet_form
+   -> hx_post_create_pet_draft
+
+UC-0010 - Sahiplendiren petin temel bilgilerini girer
+   -> hx_get_edit_pet_form
+   -> hx_put_pet_basic_info
+
+UC-0011 - Sahiplendiren petin sağlık durumunu girer
+   -> hx_put_pet_health_info
+
+UC-0012 - Sahiplendiren pete fotoğraf/video ekler
+   -> hx_post_pet_photos
+   -> hx_delete_pet_photo
+
+UC-0013 - Sahiplendiren sahiplendirme politikası oluşturur
+   -> hx_put_adoption_policy
+
+UC-0014 - Sahiplendiren masraf/veteriner tercihlerini ayarlar
+   -> hx_put_adoption_policy (Shared with policy update)
+
+UC-0015 - Sahiplendiren veteriner seçer
+   -> hx_put_select_veterinarian
+
+UC-0016 - Sahiplendiren ilanı yayına alır
+   -> hx_post_publish_pet
+
+UC-0017 - Sahiplendiren ilanı yayından kaldırır
+   -> hx_post_unpublish_pet
+
+UC-0018 - Sahiplendiren ilanı siler
+   -> hx_delete_pet
+
+UC-0019 - Kullanıcı ana sayfada ilanları görüntüler
+   -> hx_get_home_feed
+
+UC-0020 - Kullanıcı ilanları filtreler
+   -> hx_get_pet_listings
+
+UC-0021 - Kullanıcı pet detayını ve timeline inceler
+   -> hx_get_pet_detail_page
+   -> hx_get_pet_timeline
+   -> hx_get_timeline_event_detail
+
+UC-0022 - Kullanıcı sahiplik geçmişini görüntüler
+   -> hx_get_ownership_chain
+
+UC-0023 - Kullanıcı yorum yazar
+   -> hx_get_pet_comments
+   -> hx_post_public_comment
+
+UC-0024 - Kullanıcı gizli soru sorar
+   -> hx_post_private_comment
+
+UC-0025 - Sahiplendiren yorumlara cevap verir
+   -> hx_post_public_comment (Reply logic handled here)
+
+UC-0026 - Kullanıcı yorumunu düzenler/siler
+   -> hx_put_edit_comment
+   -> hx_delete_comment
+
+UC-0027 - Sahiplendiren yorum gizler
+   -> hx_post_hide_comment
+
+UC-0028 - Kullanıcı reaksiyon bırakır
+   -> hx_post_add_reaction
+   -> hx_delete_remove_reaction
+
+UC-0029 - Sahiplenen talebi oluşturur
+   -> hx_post_create_adoption_request
+
+UC-0030 - Sahiplendiren gelen talepleri listeler
+   -> hx_get_received_requests
+
+UC-0031 - Sahiplendiren talep detayını inceler
+   -> hx_get_request_detail
+
+UC-0032 - Sahiplendiren talebi reddeder
+   -> hx_post_reject_request
+
+UC-0033 - Sahiplendiren talebi onaylar (Negotiation)
+   -> hx_post_approve_request
+
+UC-0034 - Sahiplenen politikayı inceler
+   -> hx_get_policy_terms
+
+UC-0035 - Sahiplenen politikayı kabul eder
+   -> hx_post_accept_policy
+
+UC-0036 - Sahiplenen karşı teklif sunar
+   -> hx_post_counter_offer
+
+UC-0037 - Sahiplendiren şartları revize eder
+   -> hx_post_update_policy_terms
+
+UC-0038 - Sahiplendiren masraf dökümü girer
+   -> hx_post_propose_costs
+   -> hx_get_cost_breakdown
+
+UC-0039 - Sahiplenen masrafı kabul eder/pazarlık yapar
+   -> hx_post_accept_costs
+   -> hx_post_negotiate_costs
+
+UC-0040 - Taraflar anlaşır (Transfer Hazırlığı)
+   -> hx_post_finalize_for_transfer
+   -> hx_get_transfer_ready_info
+
+UC-0041 - Kullanıcı veteriner arar
+   -> hx_get_search_vets
+
+UC-0042 - Kullanıcı veteriner profilini görüntüler
+   -> hx_get_vet_profile
+   -> hx_get_vet_availability
+
+UC-0043 - Veteriner dashboard'unu açar
+   -> hx_get_vet_dashboard
+
+UC-0044 - Veteriner bekleyen işlemleri listeler
+   -> hx_get_vet_dashboard
+
+UC-0045 - Veteriner check-in yapar
+   -> hx_post_vet_checkin
+
+UC-0046 - Veteriner çip doğrular
+   -> hx_post_verify_pet_chip
+
+UC-0047 - Veteriner sağlık muayenesi yapar
+   -> hx_post_vet_health_examination
+
+UC-0048 - Veteriner kimlik doğrular
+   -> hx_post_verify_transfer_parties
+
+UC-0049 - Veteriner transferi onaylar
+   -> hx_post_vet_approve_transfer
+
+UC-0050 - Veteriner transferi reddeder
+   -> hx_post_vet_reject_transfer
+
+UC-0051 - Transferden vazgeçilir (Abort)
+   -> hx_post_abort_transfer
+
+UC-0052 - Sahiplik devredilir
+   -> hx_post_complete_ownership_transfer
+
+UC-0053 - Yeni sahip güncelleme atar
+   -> hx_post_new_owner_update
+
+UC-0054 - Eski sahip takip eder
+   -> hx_get_tracking_pets
+
+UC-0055 - Yeni sahip izinleri yönetir
+   -> hx_get_tracking_permissions
+   -> hx_delete_revoke_tracking_access
+
+UC-0056 - Yeni sahip iade başlatır
+   -> hx_post_initiate_return_process
+
+UC-0057 - Eski sahip iadeyi yönetir
+   -> hx_get_return_request_detail
+   -> hx_post_accept_return
+   -> hx_post_reject_return
+
+UC-0058 - Eski sahip ihmal bildirir
+   -> hx_post_report_neglect
+
+UC-0059 - Yeni sahip kayıp bildirir
+   -> hx_post_report_lost
+
+UC-0060 - Kullanıcı aktif ilanlarını yönetir
+   -> hx_get_user_dashboard
+   -> hx_get_my_active_pets
+
+UC-0061 - Kullanıcı sahiplendiklerini görür
+   -> hx_get_my_adopted_pets
+
+UC-0062 - Veteriner saatlerini günceller
+   -> hx_put_vet_working_hours
+
+UC-0063 - Veteriner geçmişini görür
+   -> hx_get_vet_transfer_history
+   -> hx_get_pet_medical_history
